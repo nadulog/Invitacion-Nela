@@ -735,8 +735,9 @@ body:has(.gifts-modal[open]) { overflow: hidden; }
   border: 2px solid #6e1730;
   border-radius: clamp(34px, 6vw, 58px);
   background:
-    linear-gradient(rgb(255 239 236 / 94%), rgb(255 239 236 / 94%)),
-    url("assets/cuenta-regresiva-sin-numeros.png") center / cover;
+    radial-gradient(circle at 12% 8%, rgb(255 255 255 / 72%), transparent 34%),
+    radial-gradient(circle at 92% 88%, rgb(137 19 52 / 10%), transparent 36%),
+    linear-gradient(145deg, #fff3ef, #f5d1cd);
   box-shadow: 0 25px 75px rgb(43 3 14 / 45%);
 }
 
@@ -818,17 +819,6 @@ body:has(.gifts-modal[open]) { overflow: hidden; }
   font: 600 14px/1.2 sans-serif;
   letter-spacing: .1em;
   text-transform: uppercase;
-}
-
-.location-modal__flowers {
-  position: absolute;
-  z-index: 1;
-  right: -9%;
-  bottom: -5%;
-  width: 54%;
-  aspect-ratio: 1;
-  background: url("assets/ubicacion.png") right bottom / 190% auto no-repeat;
-  filter: saturate(1.12) contrast(1.04);
 }
 
 body:has(.location-modal[open]) { overflow: hidden; }
