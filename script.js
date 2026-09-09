@@ -2,6 +2,52 @@ const EVENT_DATE = new Date("2026-10-24T21:00:00-03:00");
 const unitIds = ["days", "hours", "minutes", "seconds"];
 const units = unitIds.map((id) => document.getElementById(id));
 
+const entryScreen = document.getElementById("entryScreen");
+const enterWithMusic = document.getElementById("enterWithMusic");
+const enterWithoutMusic = document.getElementById("enterWithoutMusic");
+const invitationAudio = document.getElementById("invitationAudio");
+const audioToggle = document.getElementById("audioToggle");
+
+invitationAudio.volume = 0.42;
+
+function syncAudioToggle() {
+  const isPlaying = !invitationAudio.paused;
+  audioToggle.classList.toggle("is-playing", isPlaying);
+  audioToggle.setAttribute("aria-pressed", String(isPlaying));
+  audioToggle.setAttribute("aria-label", isPlaying ? "Apagar música" : "Encender música");
+}
+
+function revealInvitation() {
+  document.body.classList.remove("entry-open");
+  entryScreen.classList.add("is-leaving");
+  audioToggle.hidden = false;
+  window.setTimeout(() => { entryScreen.hidden = true; }, 560);
+}
+
+enterWithMusic.addEventListener("click", () => {
+  const playback = invitationAudio.play();
+  revealInvitation();
+  if (playback) playback.catch(syncAudioToggle);
+});
+
+enterWithoutMusic.addEventListener("click", () => {
+  invitationAudio.pause();
+  invitationAudio.currentTime = 0;
+  revealInvitation();
+});
+
+audioToggle.addEventListener("click", () => {
+  if (invitationAudio.paused) {
+    const playback = invitationAudio.play();
+    if (playback) playback.catch(syncAudioToggle);
+  } else {
+    invitationAudio.pause();
+  }
+});
+
+invitationAudio.addEventListener("play", syncAudioToggle);
+invitationAudio.addEventListener("pause", syncAudioToggle);
+
 const invitationPanels = [...document.querySelectorAll(".invitation > .panel")];
 const panelObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
