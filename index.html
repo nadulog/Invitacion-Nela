@@ -9,24 +9,24 @@
     <meta property="og:url" content="https://bloomdate-nela15.netlify.app/" />
     <meta property="og:title" content="Mis XV Nela" />
     <meta property="og:description" content="24 de octubre de 2026 · Estás invitado" />
-    <meta property="og:image" content="https://bloomdate-nela15.netlify.app/assets/whatsapp-preview-v2.jpg" />
-    <meta property="og:image:secure_url" content="https://bloomdate-nela15.netlify.app/assets/whatsapp-preview-v2.jpg" />
+    <meta property="og:image" content="https://bloomdate-nela15.netlify.app/assets/whatsapp-preview-v3.jpg" />
+    <meta property="og:image:secure_url" content="https://bloomdate-nela15.netlify.app/assets/whatsapp-preview-v3.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="639" />
+    <meta property="og:image:width" content="1732" />
+    <meta property="og:image:height" content="908" />
     <meta property="og:image:alt" content="Invitación a los XV de Nela" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://bloomdate-nela15.netlify.app/assets/whatsapp-preview-v2.jpg" />
+    <meta name="twitter:image" content="https://bloomdate-nela15.netlify.app/assets/whatsapp-preview-v3.jpg" />
     <title>Mis XV Nela</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=16" />
+    <link rel="stylesheet" href="styles.css?v=17" />
   </head>
   <body class="entry-open">
     <div class="entry-screen" id="entryScreen" role="dialog" aria-modal="true" aria-label="Elegí cómo ingresar a la invitación">
       <div class="entry-screen__card">
-        <img src="assets/intro-musica.png" alt="Mis XV Nela. Elegí cómo ingresar" />
+        <img src="assets/intro-musica-v2.png" alt="Mis XV Nela. Elegí cómo ingresar" />
         <button class="entry-option entry-option--music" id="enterWithMusic" type="button">
           <span class="sr-only">Entrar con música</span>
         </button>
@@ -90,14 +90,9 @@
         </header>
         <div class="photo-gallery__grid">
           <figure class="polaroid polaroid--landscape"><img src="assets/nela-bebe.png" alt="Nela de bebé" loading="lazy" decoding="async" /></figure>
-          <figure class="polaroid"><img src="assets/nela-01.jpeg" alt="Retrato de Nela" loading="lazy" decoding="async" /></figure>
-          <figure class="polaroid"><img src="assets/nela-02.jpeg" alt="Nela con vestido negro durante la sesión de fotos" loading="lazy" decoding="async" /></figure>
-          <figure class="polaroid"><img src="assets/nela-03.jpeg" alt="Retrato nocturno de Nela" loading="lazy" decoding="async" /></figure>
-          <figure class="polaroid"><img src="assets/nela-04.jpeg" alt="Nela sentada durante la sesión de fotos" loading="lazy" decoding="async" /></figure>
-          <figure class="polaroid"><img src="assets/nela-05.jpeg" alt="Nela caminando con botas blancas" loading="lazy" decoding="async" /></figure>
-          <figure class="polaroid"><img src="assets/nela-06.jpeg" alt="Retrato de estudio de Nela" loading="lazy" decoding="async" /></figure>
-          <figure class="polaroid"><img src="assets/nela-07.jpeg" alt="Nela en una sesión de estudio" loading="lazy" decoding="async" /></figure>
-          <figure class="polaroid"><img src="assets/nela-08.jpeg" alt="Nela posando con botas negras" loading="lazy" decoding="async" /></figure>
+          <figure class="polaroid"><img src="assets/nela-galeria-01.jpeg" alt="Retrato nocturno de Nela con vestido negro" loading="lazy" decoding="async" /></figure>
+          <figure class="polaroid"><img src="assets/nela-galeria-02.jpeg" alt="Nela caminando con botas blancas" loading="lazy" decoding="async" /></figure>
+          <figure class="polaroid"><img src="assets/nela-galeria-03.jpeg" alt="Retrato de estudio de Nela" loading="lazy" decoding="async" /></figure>
         </div>
       </section>
 
@@ -143,11 +138,12 @@
 
     <dialog class="location-modal" id="locationModal" aria-labelledby="locationModalTitle">
       <div class="location-modal__card">
+        <img src="assets/ubicacion-modal-v2.png" alt="" aria-hidden="true" />
         <button class="location-modal__close" id="locationClose" type="button" aria-label="Cerrar">×</button>
         <div class="location-modal__content">
-          <p class="location-modal__eyebrow">Cómo llegar</p>
-          <h2 id="locationModalTitle">Jano’s Olivos</h2>
-          <address>
+          <p class="sr-only">Cómo llegar</p>
+          <h2 id="locationModalTitle" class="sr-only">Jano’s Olivos</h2>
+          <address class="sr-only">
             Mariano Pelliza 310<br />
             Olivos, Provincia de Buenos Aires
           </address>
